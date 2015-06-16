@@ -1,16 +1,16 @@
-﻿Type.registerNamespace("Alchemy.Plugins.HelloWorld.Commands");
+﻿Type.registerNamespace("Alchemy.Plugins.${PluginName}.Commands");
 
 /**
  * Example of using a plain old anguilla creation of a command. Note that using this style will not be covered
  * by the Alchemy api if there's any changes to Anguilla in future.
  */
-Alchemy.Plugins.HelloWorld.Commands.ErrorTest = function () {
-    Type.enableInterface(this, "Alchemy.Plugins.HelloWorld.Commands.ErrorTest");
+Alchemy.Plugins.${PluginName}.Commands.ErrorTest = function () {
+    Type.enableInterface(this, "Alchemy.Plugins.{PluginName}.Commands.ErrorTest");
     this.addInterface("Tridion.Cme.Command", ["ErrorTest"]);
 };
 
 // ErrorTest Prototype
-Alchemy.Plugins.HelloWorld.Commands.ErrorTest.prototype = {
+Alchemy.Plugins.${PluginName}.Commands.ErrorTest.prototype = {
 
     /**
      * Whether or not the command is available. Just an example of how to check for admins only.
@@ -32,7 +32,7 @@ Alchemy.Plugins.HelloWorld.Commands.ErrorTest.prototype = {
     _execute: function (selection) {
 
         var progress = $messages.registerProgress("Waiting for an error...", null),
-            Service = Alchemy.Plugins.HelloWorld.Api.Service,
+            Service = Alchemy.Plugins.${PluginName}.Api.Service,
             userName = Tridion.ContentManager.UserSettings.getInstance().getUserName();
 
         // another way of setting the success message

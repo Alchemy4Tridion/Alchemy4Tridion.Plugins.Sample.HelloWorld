@@ -30,7 +30,7 @@ Alchemy.command("${PluginName}", "GetApiVersion", {
 
         // This is the Promise pattern that the webapi proxy js exposes. Look at another example to
         // see how the callback method can also be used.
-        Alchemy.Plugins.HelloWorld.Api.Service.getApiVersion()
+        Alchemy.Plugins.${PluginName}.Api.Service.getApiVersion()
             .success(function (apiVersion) {
                 // first arg in success is what's returned by your controller's action
                 $messages.registerGoal("Api Version is " + apiVersion);

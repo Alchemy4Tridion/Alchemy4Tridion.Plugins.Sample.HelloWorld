@@ -5,6 +5,6 @@
  * ${JsUrl}
  * ...
  */
-.contextmenu #cm_helloworld .image {
+.contextmenu #cm_helloworld > .image {
     background-image: url('${ImgUrl}sample-small-icon.png');
 }

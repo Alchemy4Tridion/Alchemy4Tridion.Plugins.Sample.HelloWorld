@@ -33,7 +33,7 @@ Alchemy.command("${PluginName}", "HelloWorld", {
         // see how the promise pattern can also be used.
 
         // The call back must go as last parameter of action method.
-        Alchemy.Plugins.HelloWorld.Api.Service.helloWorld(userName, function (error, message) {
+        Alchemy.Plugins.${PluginName}.Api.Service.helloWorld(userName, function (error, message) {
             progress.finish({ success: true });
             if (error) {
                 // error will only exist if there was an error, otherwise it'll be null.
