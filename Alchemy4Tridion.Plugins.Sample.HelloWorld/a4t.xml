@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.alchemywebstore.com/">
-  <buildTime>2015-06-15T21:42:19.9628834-04:00</buildTime>
   <id>557ef585e4de020df8a60383</id>
   <description><![CDATA[]]></description>
   <name>HelloWorld</name>
