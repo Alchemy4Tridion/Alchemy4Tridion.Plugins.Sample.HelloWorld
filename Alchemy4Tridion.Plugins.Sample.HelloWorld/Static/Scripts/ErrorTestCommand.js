@@ -13,13 +13,6 @@ Alchemy.Plugins["${PluginName}"].Commands.ErrorTest = function () {
 Alchemy.Plugins["${PluginName}"].Commands.ErrorTest.prototype = {
 
     /**
-     * If you add an init function, it will be called from the constructor when the command is created.
-     */
-    init: function () {
-        console.log("Error Test Init Called!");
-    },
-
-    /**
      * Whether or not the command is available. Just an example of how to check for admins only.
      */
     isAvailable: function (selection) {

@@ -5,6 +5,15 @@
  * Note the ${PluginName} will get replaced by the actual plugin name.
  */
 Alchemy.command("${PluginName}", "GetApiVersion", {
+
+    /**
+     * If an init function is created, this will be called from the command's constructor when a command instance
+     * is created.
+     */
+    init: function () {
+        console.log("INIT CALLED FROM GetApiVersion");
+    },
+
     /**
      * Whether or not the command is enabled for the user (will usually have extensions displayed but disabled).
      * @returns {boolean}
