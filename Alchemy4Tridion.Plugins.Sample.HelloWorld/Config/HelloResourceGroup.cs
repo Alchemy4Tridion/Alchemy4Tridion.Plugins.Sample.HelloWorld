@@ -18,6 +18,7 @@ namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Config
             AddFile("ErrorTestCommand.js");
             AddFile("GetApiVersionCommand.js");
             AddFile("HelloWorldCommand.js");
+            AddFile("HelloSettingsCommand.js");
 
             AddFile("Hello.css");
 

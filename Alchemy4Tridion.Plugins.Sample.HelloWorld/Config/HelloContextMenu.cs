@@ -23,7 +23,8 @@ namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Config
             AddSubMenu("cm_helloworld", "Hello World") // creates a submenu item and returns it so you can chain items to it
                 .AddItem("cm_helloworld_error", "Error Test", "ErrorTest")         // adds following items to above submenu
                 .AddItem("cm_helloworld_api", "Get Api Version", "GetApiVersion")
-                .AddItem("cm_helloworld_hi", "Hi!", "HelloWorld");
+                .AddItem("cm_helloworld_hi", "Hi!", "HelloWorld")
+                .AddItem("cm_helloworld_settings", "Settings", "HelloSettings");
 
             // We need to addd our resource group as a dependency to this extension
             Dependencies.Add<HelloResourceGroup>();

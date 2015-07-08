@@ -21,6 +21,7 @@ namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Config
             AddCommand("ErrorTest");
             AddCommand("GetApiVersion");
             AddCommand("HelloWorld");
+            AddCommand("HelloSettings");
         }
     }
 }

@@ -7,4 +7,5 @@
     <c:RibbonContextMenuItem runat="server" Command="ErrorTest" Title="Error Test" Label="Error Test" />
     <c:RibbonContextMenuItem runat="server" Command="GetApiVersion" Title="Get Api Version" Label="Get Api Version" />
     <c:RibbonContextMenuItem runat="server" Command="HelloWorld" Title="Hello World!" Label="Hello World!" />
+    <c:RibbonContextMenuItem runat="server" Command="HelloSettings" Title="Settings" Label="Settings" />
 </c:RibbonButton>

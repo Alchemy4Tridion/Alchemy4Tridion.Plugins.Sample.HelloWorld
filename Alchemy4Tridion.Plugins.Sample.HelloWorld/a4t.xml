@@ -1,8 +1,50 @@
 <?xml version="1.0"?>
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.alchemywebstore.com/">
   <id>557ef585e4de020df8a60383</id>
-  <description><![CDATA[]]></description>
+  <description><![CDATA[The is a *sample project* that contains a few of the most common plugins that you'll create.  The HelloWorld plugin will add a ribbon bar button and a context menu item.
+
+Follow the <a href="https://github.com/Alchemy4Tridion/Alchemy4Tridion.Plugins.Sample.HelloWorld" target="_blank">source code link</a> to check out the examples which include configuration, commands, and a backend web service!]]></description>
   <name>HelloWorld</name>
   <version>1.0.0.0</version>
   <versionId>557ef585e4de020df8a60382</versionId>
+  <settings>
+    <SomeKey>SomeValue</SomeKey>
+    <AnotherKey>AnotherValue</AnotherKey>
+    <Favorites client="true">
+      <Fav>One</Fav>
+      <Fav>Two</Fav>
+    </Favorites>
+    <IsAlsoEncrypted encrypt="true">IsAlsoEncryptedValue</IsAlsoEncrypted>
+    <IsAlsoClientEncrypted encrypt="true" client="true">AClientEncryptedValue</IsAlsoClientEncrypted>
+    <!-- The following settings within the <client /> element can be retrieved by th eclient api. -->
+    <!-- You can also set client settings w/o the <client /> element by adding a client="true" attribute -->
+    <client>
+      <Name>Hello World Sample Project</Name>
+      <IsBoolean>true</IsBoolean>
+      <Address>
+        <Street>12345 Number St.</Street>
+        <City>ContentBloomVille</City>
+        <Zip>12345</Zip>
+      </Address>
+      <SpecialDate>06/14/2015</SpecialDate>
+      <Users>
+        <User>
+          <Name>TesterA</Name>
+        </User>
+        <User>
+          <Name>TesterB</Name>
+        </User>
+        <User>
+          <Name>TesterC</Name>
+        </User>
+      </Users>
+      <EmptyList array="true">
+      </EmptyList>
+    </client>
+    <!-- The following settings within the <encrypt /> element will have their values encrypted. -->
+    <!-- You can also encrypt other settings w/o the <encrypt /> element by adding an encrypt="true attribute -->
+    <encrypt>
+      <SomePassword>PleaseEncryptMe</SomePassword>
+    </encrypt>
+  </settings>
 </plugin>
