@@ -2,7 +2,6 @@ using System;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Tridion.ContentManager.CoreService.Client;
 
 namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Controllers
 {
@@ -11,11 +10,11 @@ namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Controllers
     /// </summary>
     /// <remarks>
     /// The following conditions apply:
-    ///     1.) Must have AlchemyRoutePrefix attribute. You pass in the type of your AlchemyPlugin (the one that inherits AlchemyPluginBase).
+    ///     1.) Must have AlchemyRoutePrefix attribute.
     ///     2.) Must inherit AlchemyApiController.
     ///     3.) All Action methods must have an Http Verb attribute on it as well as a RouteAttribute (otherwise it won't generate a js proxy).
     /// </remarks>
-    [AlchemyRoutePrefix(typeof(AlchemyPlugin), "Service")]
+    [AlchemyRoutePrefix("Service")]
     public class ServiceController : AlchemyApiController
     {
         // GET /Alchemy/Plugins/HelloWorld/api/Service/GetApiVersion
@@ -35,28 +34,31 @@ namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Controllers
         [Route("ApiVersion")]
         public string GetApiVersion()
         {
-            SessionAwareCoreServiceClient client = null;
-            try
-            {
-                client = new SessionAwareCoreServiceClient("netTcp_2013");
-                string version = client.GetApiVersion();
+            // Use the Client property of AlchemyApiController to access a lazily initialized SessionAwareCoreServiceClient
+            // instance. This is actually a special wrapper that is Dispose-safe.  AlchemyApiController will handle
+            // the Dispose call of this "Client" property automatically behind the scenes when the request has
+            // ended (though there's no harm if you call Client.Dispose() manually either).
+            return Client.GetApiVersion();
 
-                client.Close();
+            // NOTE: The client created is automatically impersonated as the currently logged in Tridion User making
+            //       this request!
+        }
 
-                return version;
-            }
-            catch (Exception ex)
-            {
-                // proper way of ensuring that the client gets closed... we close it in our try block above,
-                // then in a catch block if an exception is thrown we abort it.
-                if (client != null)
-                {
-                    client.Abort();
-                }
-
-                // we are rethrowing the original exception and just letting webapi handle it
-                throw ex;
-            }
+        /// <summary>
+        /// This is an example of using the "User" property of AlchemyApiController (this value can just
+        /// as easily have been gotten from the anguilla js framework).
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("IsSystemAdministrator")]
+        public string IsUserSystemAdministrator()
+        {
+            // User is an IUserService, when allows you to easily get the username and UserData of the
+            // currently logged in tridion user.  This IUserService instance uses the Client property of
+            // this controller for any needed calls via core service.
+            return User.GetName() + (User.IsSystemAdministrator() 
+                ? " is a System Administrator!"
+                : " is NOT a System Administrator!");
         }
 
         /// <summary>
