@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.alchemywebstore.com/">
   <id>557ef585e4de020df8a60383</id>
+  <name>HelloWorld</name>
   <description><![CDATA[The is a *sample project* that contains a few of the most common plugins that you'll create.  The HelloWorld plugin will add a ribbon bar button and a context menu item.
 
 Follow the <a href="https://github.com/Alchemy4Tridion/Alchemy4Tridion.Plugins.Sample.HelloWorld" target="_blank">source code link</a> to check out the examples which include configuration, commands, and a backend web service!]]></description>
-  <name>HelloWorld</name>
   <version>1.0.0.0</version>
-  <versionId>557ef585e4de020df8a60382</versionId>
   <settings>
     <SomeKey>SomeValue</SomeKey>
     <AnotherKey>AnotherValue</AnotherKey>
@@ -47,4 +46,7 @@ Follow the <a href="https://github.com/Alchemy4Tridion/Alchemy4Tridion.Plugins.S
       <SomePassword>PleaseEncryptMe</SomePassword>
     </encrypt>
   </settings>
+  <versionId>557ef585e4de020df8a60382</versionId>
+  <frameworkVersion>0.6.1.0</frameworkVersion>
+  <buildTime>2015-08-27T22:08:12.5121016-04:00</buildTime>
 </plugin>

@@ -11,7 +11,7 @@
     <AssemblyName>Alchemy4Tridion.Plugins.Sample.HelloWorld</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>5c57462e</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>508d913d</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

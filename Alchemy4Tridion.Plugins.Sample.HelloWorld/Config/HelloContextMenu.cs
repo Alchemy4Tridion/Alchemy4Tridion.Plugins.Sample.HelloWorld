@@ -25,7 +25,7 @@ namespace Alchemy4Tridion.Plugins.Sample.HelloWorld.Config
                 .AddItem("cm_helloworld_api", "Get Api Version", "GetApiVersion")
                 .AddItem("cm_helloworld_hi", "Hi!", "HelloWorld")
                 .AddItem("cm_helloworld_settings", "Settings", "HelloSettings");
-
+            
             // We need to addd our resource group as a dependency to this extension
             Dependencies.Add<HelloResourceGroup>();
 
