@@ -27,7 +27,7 @@ Alchemy.command("${PluginName}", "HelloWorld", {
     execute: function () {
 
         var progress = $messages.registerProgress("Getting api version...", null),
-            userName = "AlchemyTester";d
+            userName = "AlchemyTester";
 
         // This is the error first callback pattern that the webapi proxy js exposes. Look at another example to
         // see how the promise pattern can also be used.
